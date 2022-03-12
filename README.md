@@ -59,8 +59,8 @@ For more information you can refer to:
 
 https://perldoc.perl.org/perlembed
 
-This program shows the error if Perl handles the error, older version of Perl
-will have the issue:
+This program shows the error if Perl handles it, versions of Perl older
+than __5.24__ will have the issue:
 
 https://www.reddit.com/r/perl/comments/taenkc/unable_to_flush_stdout/
 
