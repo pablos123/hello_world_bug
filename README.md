@@ -12,7 +12,7 @@ bug shared by sunfishcode.
 Every C program that uses Perl must link in the perl library.
 
 First you'll have to choose the appropriate compiler because you need to compile
-the program in the same way that your perl was compiled.
+the program in the same way that your Perl was compiled.
 
 Usually is gcc, but we can check that viewing the __cc__ variable:
 
@@ -54,6 +54,15 @@ path following the -I.
 The final version of my compile command is this one:
 
     gcc -I/usr/lib/x86_64-linux-gnu/perl/5.30/CORE -L/usr/lib/x86_64-linux-gnu/ -o hello_world_bug hello_world_bug.c `perl -MExtUtils::Embed -e ccopts -e ldopts`
+
+For more information you can refer to:
+
+https://perldoc.perl.org/perlembed
+
+This program shows the error if Perl handles the error, older version of Perl
+will have the issue:
+
+https://www.reddit.com/r/perl/comments/taenkc/unable_to_flush_stdout/
 
 # Testing
 
